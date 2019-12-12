@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/narcomacer/css_sandbox#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
-  }
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0"
+  },
+  "dependencies": {}
 }

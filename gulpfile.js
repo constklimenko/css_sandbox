@@ -1,3 +1,4 @@
 var gulp = require('gulp');
 
-gulp.task('hello', function() { console.log('hello world'); })
+gulp.task('hello', function(w) { console.log('hello world');
+    w() })
