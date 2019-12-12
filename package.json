@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/narcomacer/css_sandbox/issues"
   },
-  "homepage": "https://github.com/narcomacer/css_sandbox#readme"
+  "homepage": "https://github.com/narcomacer/css_sandbox#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
