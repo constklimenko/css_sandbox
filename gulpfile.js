@@ -34,15 +34,18 @@ gulp.task('less', function() {
         .pipe(browserSync.stream());
 });
 
-gulp.task('serve', () => {
+gulp.task('serve', (done) => {
     browserSync.init({
         server: {
             baseDir: config.output.path
         }
     });
-    gulp.watch(config.paths.less, ['less']);
-    gulp.watch(config.paths.html).on('change', browerSync.reload);
+    gulp.watch(config.path.less, gulp.series('less'));
+    gulp.watch(config.path.html).on('change', () => {
+        browserSync.reload();
+        done();
+    });
 
 });
 
-gulp.task('default', ['less', 'serve']);
+gulp.task('default', gulp.series('less', 'serve'));
