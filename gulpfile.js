@@ -9,7 +9,7 @@ var less = require('gulp-less');
 var authoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
-var cleanCss = require('clean-css');
+var cleanCss = require('gulp-clean-css');
 var browserSync = require('browser-sync').create();
 
 var config = {
@@ -28,7 +28,7 @@ gulp.task('less', function() {
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(concat(config.output.cssName))
-        .pipe(authoprefixer())
+        .pipe(authoprefixer()).pipe(cleanCss())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.output.path))
         .pipe(browserSync.stream());
