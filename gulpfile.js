@@ -15,11 +15,15 @@ var browserSync = require('browser-sync').create();
 var config = {
     path: {
         less: './src/less/**/*.less',
-        html: '.public/index.html'
+        html: '.public/index.html',
+
     },
     output: {
         cssName: 'bundle.min.css',
-        path: './public'
+        path: './public',
+        path_file: './public/index.html',
+        path_file_css: './public/index.html',
+        newHtml: '/tmp/fz3temp-2'
     }
 }
 
@@ -35,13 +39,21 @@ gulp.task('less', function() {
         .pipe(browserSync.stream());
 });
 
+gulp.task('push', function() {
+    return gulp.src(config.output.path_file).pipe(gulp.dest(config.output.newHtml));
+});
+
+gulp.task('pushCss', function() {
+    return gulp.src(config.output.path_file_css).pipe(gulp.dest(config.output.newHtml));
+})
+
 gulp.task('serve', (done) => {
     browserSync.init({
         server: {
             baseDir: config.output.path
         }
     });
-    gulp.watch(config.path.less, gulp.series('less'));
+    gulp.watch(config.path.less, gulp.series('less', 'push', 'pushCss'));
     gulp.watch(config.path.html).on('change', () => {
         browserSync.reload();
         done();
