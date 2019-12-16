@@ -22,7 +22,7 @@ var config = {
         cssName: 'bundle.min.css',
         path: './public',
         path_file: './public/index.html',
-        path_file_css: './public/index.html',
+        path_file_css: './public/bundle.min.css',
         newHtml: '/tmp/fz3temp-2'
     }
 }
