@@ -14,7 +14,7 @@ var browserSync = require('browser-sync').create();
 
 var config = {
     path: {
-        less: './src/less/**/*.less',
+        less: './src/less/*.less',
         html: '.public/index.html',
 
     },
