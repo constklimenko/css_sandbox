@@ -4,3 +4,91 @@
 a {
   text-decoration-color: none ;
 }
+
+html{
+  max-width: 100vw;
+  .clear;
+}
+
+body {
+  .font-s;
+  max-width: 100%;
+  .clear;
+}
+
+
+
+/* Header */
+
+.header {
+  .bg-cover-color('img/bg.jpg',@background);
+  .size-full;
+  .padding-h();
+  
+  color: white;
+  
+  
+  &__title{
+    .font-xl-600;
+    .text-shadow;
+    
+    @media (max-width: @size-mobile){
+      .font-l-600;
+    }
+    
+  }
+  
+  &__subtitle{
+    .font-l-600;.text-shadow;
+    @media (max-width: @size-mobile) {
+      .font-xs
+    }
+  }
+  
+  &__link {
+    .font-s;
+    @media (max-width: @size-mobile) {
+      .font-xs
+    }
+  }
+}
+/* nav */
+nav {
+  @media( max-width:@size-mobile){
+    
+  }
+  
+  
+}
+
+.m-hide{
+   @media(max-width:@size-mobile) {
+     display: none;
+   }
+}
+
+/* nav end */
+
+
+
+/* Header end */
+
+/* About */
+
+
+/* About end */
+
+/* Skills */
+
+
+/* Skills end */
+
+/* Portfolio */
+
+
+/* Portfolio end */
+
+/* Footer */
+
+
+/* Footer end */

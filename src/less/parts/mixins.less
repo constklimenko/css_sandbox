@@ -1,6 +1,20 @@
-.clear{
+.clear(){
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+.size-full(){
+  width: 100vw;
+  height: auto;
+  padding-right: ~"calc(50vw - 555px)";
+  padding-left:~"calc(50vw - 555px)";
+  box-sizing: border-box;
+  
+  @media ( max-width:1170px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 .bg-cover(@url){
@@ -12,6 +26,11 @@
   url(@url2) no-repeat center/ cover;
 }
 
+.bg-cover-color(@url, @color) {
+  background: url(@url) no-repeat center/ cover,
+    @color ;
+}
+
 .bg-contain(@url) {
   background: url(@url) no-repeat center/ contain;
 }
@@ -19,6 +38,34 @@
 .bg-contain(@url, @url2) {
   background: url(@url) no-repeat center/ contain,
   url(@url2) no-repeat center/ contain;
+}
+
+.font-xxs() {
+  font-family: @font-family;
+  font-size  : @fnt-size-xxs;
+  font-weight: normal;
+  line-height: @line-height;
+}
+
+.font-xxs-600() {
+  font-family: @font-family;
+  font-size  : @fnt-size-xxs;
+  font-weight: 600;
+  line-height: @line-height;
+}
+
+.font-xs() {
+  font-family: @font-family;
+  font-size  : @fnt-size-xs;
+  font-weight: normal;
+  line-height: @line-height;
+}
+
+.font-xs-600() {
+  font-family: @font-family;
+  font-size  : @fnt-size-xs;
+  font-weight: 600;
+  line-height: @line-height;
 }
 
 .font-s(){
@@ -49,6 +96,20 @@
   line-height: @line-height;
 }
 
+.font-l() {
+  font-family: @font-family;
+  font-size  : @fnt-size-l;
+  font-weight: normal;
+  line-height: @line-height;
+}
+
+.font-l-600() {
+  font-family: @font-family;
+  font-size  : @fnt-size-l;
+  font-weight: 600;
+  line-height: @line-height;
+}
+
 .font-xl() {
   font-family: @font-family;
   font-size  : @fnt-size-m;
@@ -61,4 +122,19 @@
   font-size  : @fnt-size-xl;
   font-weight: 600;
   line-height: @line-height;
+}
+
+.text-shadow(@color: black){
+  text-shadow: 0.1em 0.1em 4px @color ;
+}
+
+
+.padding-h(@p-top: 93px, @p-bottom: 145px){
+  padding-bottom: @p-bottom;
+  padding-top: @p-top;
+  @media(max-width:@size-mobile) {
+    padding-bottom: @p-bottom / 3;
+padding-top: @p-top / 3;
+  }
+  
 }
