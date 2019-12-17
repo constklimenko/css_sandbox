@@ -53,7 +53,8 @@ gulp.task('serve', (done) => {
             baseDir: config.output.path
         }
     });
-    gulp.watch(config.path.less, gulp.series('less', 'push', 'pushCss'));
+    gulp.watch(config.path.less, gulp.series('less'));
+    //  'push', 'pushCss'));
     gulp.watch(config.path.html).on('change', () => {
         browserSync.reload();
         done();

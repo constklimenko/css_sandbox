@@ -7,29 +7,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document with less</title>
     <link rel="stylesheet" href="bundle.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <section>
-        <div class="cat b-n">
-            <div class="cat_face ">
-                <div class="cats_nose" onclick="catAppear()">
-                </div>
-            </div>
-            <div class="hh gosmos ">
+    <header>
 
-            </div>
+        <nav>
+            <div class="nav__title">Portfolio</div>
+
+            <div class="nav__link">Home</div>
+            <div class="nav__link">About</div>
+            <div class="nav__link">Skills</div>
+            <div class="nav__link">Portfolio</div>
+            <div class="nav__link">Contacts</div>
+
+        </nav>
+
+        <h1 class="header__title">Hi, It’s Théophile Seyrig</h1>
+        <div class="header__subtitle">Designer from Porto, Portugal</div>
+        <a class="header__link">Latest works</a>
+    </header>
+
+    <main>
+        <section class="about"></section>
+
+        <section class="skills"></section>
+
+        <section class="portfolio"></section>
 
 
-        </div>
-        <script>
-            function catAppear() {
-                document.querySelector('.cat').classList.toggle('b-n');
+    </main>
 
-            }
-        </script>
-    </section>
+
+    <footer></footer>
 
 </body>
 

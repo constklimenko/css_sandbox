@@ -2,3 +2,63 @@
   padding: 0;
   margin: 0;
 }
+
+.bg-cover(@url){
+  background: url(@url) no-repeat center/ cover;
+}
+
+.bg-cover(@url, @url2) {
+  background: url(@url) no-repeat center/ cover,
+  url(@url2) no-repeat center/ cover;
+}
+
+.bg-contain(@url) {
+  background: url(@url) no-repeat center/ contain;
+}
+
+.bg-contain(@url, @url2) {
+  background: url(@url) no-repeat center/ contain,
+  url(@url2) no-repeat center/ contain;
+}
+
+.font-s(){
+  font-family: @font-family;
+  font-size: @fnt-size-s;
+  font-weight: normal;
+  line-height: @line-height;
+}
+
+.font-s-600() {
+  font-family: @font-family;
+  font-size  : @fnt-size-s;
+  font-weight: 600;
+  line-height: @line-height;
+}
+
+.font-m() {
+  font-family: @font-family;
+  font-size  : @fnt-size-m;
+  font-weight: normal;
+  line-height: @line-height;
+}
+
+.font-m-600() {
+  font-family: @font-family;
+  font-size  : @fnt-size-m;
+  font-weight: 600;
+  line-height: @line-height;
+}
+
+.font-xl() {
+  font-family: @font-family;
+  font-size  : @fnt-size-m;
+  font-weight: normal;
+  line-height: @line-height;
+}
+
+.font-xl-600() {
+  font-family: @font-family;
+  font-size  : @fnt-size-xl;
+  font-weight: 600;
+  line-height: @line-height;
+}
