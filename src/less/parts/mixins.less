@@ -165,12 +165,28 @@
   align-self         : center;
 }
 
-.nav-grid() {
+.nav-grid(@first-column-width:50%, @last-column-number:5) {
   display              : grid;
-  grid-template-columns: 50% repeat(5, 1fr);
+  grid-template-columns: @first-column-width repeat(@last-column-number, 1fr);
+}
+
+.vertical-grid(@rows: 6){
+  display : grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(@rows, .11fr);
+  align-items: center;
+  justify-items: center;
 }
 
 .text-center() {
   text-align    : center;
   vertical-align: middle;
+}
+
+.full-window(){
+    position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
 }
