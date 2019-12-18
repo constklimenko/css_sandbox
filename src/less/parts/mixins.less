@@ -1,29 +1,29 @@
-.clear(){
-  padding: 0;
-  margin: 0;
+.clear() {
+  padding   : 0;
+  margin    : 0;
   box-sizing: border-box;
 }
 
-.size-full(){
-  width: 100vw;
-  height: auto;
+.size-full() {
+  width        : 100vw;
+  height       : auto;
   padding-right: ~"calc(50vw - 555px)";
-  padding-left:~"calc(50vw - 555px)";
-  box-sizing: border-box;
-  
-  @media ( max-width:1170px) {
-    padding-left: 30px;
+  padding-left : ~"calc(50vw - 555px)";
+  box-sizing   : border-box;
+
+  @media (max-width:1170px) {
+    padding-left : 30px;
     padding-right: 30px;
   }
 }
 
-.bg-cover(@url){
+.bg-cover(@url) {
   background: url(@url) no-repeat center/ cover;
 }
 
 .bg-cover(@url, @url2) {
   background: url(@url) no-repeat center/ cover,
-  url(@url2) no-repeat center/ cover;
+    url(@url2) no-repeat center/ cover;
 }
 
 .bg-cover-color(@url, @color) {
@@ -37,7 +37,7 @@
 
 .bg-contain(@url, @url2) {
   background: url(@url) no-repeat center/ contain,
-  url(@url2) no-repeat center/ contain;
+    url(@url2) no-repeat center/ contain;
 }
 
 .font-xxs() {
@@ -68,9 +68,9 @@
   line-height: @line-height;
 }
 
-.font-s(){
+.font-s() {
   font-family: @font-family;
-  font-size: @fnt-size-s;
+  font-size  : @fnt-size-s;
   font-weight: normal;
   line-height: @line-height;
 }
@@ -124,17 +124,53 @@
   line-height: @line-height;
 }
 
-.text-shadow(@color: black){
-  text-shadow: 0.1em 0.1em 4vpx @color ;
+.text-shadow(@color: black) {
+  text-shadow: 0.1em 0.1em 4px @color ;
 }
 
 
-.padding-h(@p-top: 93px, @p-bottom: 145px){
+.padding-h(@p-top: 93px, @p-bottom: 145px) {
   padding-bottom: @p-bottom;
-  padding-top: @p-top;
+  padding-top   : @p-top;
+
   @media(max-width:@size-mobile) {
     padding-bottom: @p-bottom / 3;
-padding-top: @p-top / 3;
+    padding-top   : @p-top / 3;
   }
-  
+
+}
+
+.flex-row() {
+  display               : -ms-flexbox;
+  display               : -webkit-flex;
+  display               : flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction    : row;
+  flex-direction        : row;
+  -webkit-flex-wrap     : wrap;
+  -ms-flex-wrap         : wrap;
+  flex-wrap             : wrap;
+
+}
+
+.flex_item(@width) {
+  -webkit-order      : 0;
+  -ms-flex-order     : 0;
+  order              : 0;
+  -webkit-flex       : 0 1 @width;
+  -ms-flex           : 0 1 @width;
+  flex               : 0 1 @width;
+  -webkit-align-self : center;
+  -ms-flex-item-align: center;
+  align-self         : center;
+}
+
+.nav-grid() {
+  display              : grid;
+  grid-template-columns: 50% repeat(5, 1fr);
+}
+
+.text-center() {
+  text-align    : center;
+  vertical-align: middle;
 }
