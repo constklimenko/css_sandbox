@@ -171,6 +171,10 @@ a {
   &__content {
     .font-s;
     .block-content;
+    
+     @media(max-width:@size-mobile) {
+       display: block;
+     }
   }
 
   &__img {
@@ -186,13 +190,21 @@ a {
   grid-row-gap         : 20px;
   grid-column-gap      : 78px;
   grid-template-columns: max-content 1fr;
-  grid-template-rows   : 70px repeat(6, 1fr);
+  grid-template-rows   : 1.6fr repeat(6, 1fr);
   align-items          : center;
   justify-items        : center;
+  .font-s;
+   @media(max-width:@size-mobile) {
+     margin-top: 25px;
+   grid-column-gap : 5px;
+   .font-xs;
+   
+ }
   
 
   &__row-title {
     .content-row;
+    font-weight: 600;
   }
 
   &__rectangle-1 {
