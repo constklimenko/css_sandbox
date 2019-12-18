@@ -149,8 +149,8 @@ a {
   &__title {
     .block-title;
   }
-  
-  &__content{
+
+  &__content {
     .font-s;
   }
 }
@@ -159,12 +159,82 @@ a {
 /* About end */
 
 /* Skills */
+.skills {
+  .size-full;
+  .padding-h();
+  background: @white;
+
+  &__title {
+    .block-title;
+  }
+
+  &__content {
+    .font-s;
+    .block-content;
+  }
+
+  &__img {
+    width : 100%;
+    height: auto;
+  }
+}
+
+/* Diagrams */
+.diagrams {
+  grid-column          : ~"3/4";
+  display              : grid;
+  grid-row-gap         : 20px;
+  grid-column-gap      : 78px;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows   : 70px repeat(6, 1fr);
+  align-items          : center;
+  justify-items        : center;
+  
+
+  &__row-title {
+    .content-row;
+  }
+
+  &__rectangle-1 {
+    .diagrams-rectangle(70%);
+
+  }
+
+  &__rectangle-2 {
+    .diagrams-rectangle(80%);
+
+  }
+
+  &__rectangle-3 {
+    .diagrams-rectangle(65%);
+
+  }
+
+  & div {
+    .content-row;
+  }
+}
+
+/* Diagrams end */
 
 
 /* Skills end */
 
 /* Portfolio */
 
+.portfolio {
+  .size-full;
+  .padding-h();
+
+  &__title {
+    .block-title;
+  }
+
+  &__content {
+    .font-s;
+    .block-content;
+  }
+}
 
 /* Portfolio end */
 
