@@ -172,9 +172,7 @@ a {
     .font-s;
     .block-content;
 
-    @media(max-width:@size-mobile) {
-      display: block;
-    }
+
   }
 
   &__img {
@@ -272,17 +270,41 @@ a {
       grid-row   : ~"1/3";
       grid-column: ~"2/3";
     }
-    
+
     &>img:nth-child(3) {
-  grid-row   : ~"2/4";
-  grid-column: ~"1/2";
-}
+      grid-row   : ~"2/4";
+      grid-column: ~"1/2";
+    }
   }
 }
 
 /* Portfolio end */
 
 /* Footer */
+.footer {
+  .size-full;
+  .padding-h();
 
+  &__title {
+    .block-title;
+  }
+
+  &__content {
+    display              : grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows   : repeat(5, auto);
+    align-items          : stretch;
+    justify-items        : stretch;
+    grid-row-gap         : 1em;
+    grid-template-areas  : "a1 b1 c1",
+      "a2 b2 c2",
+      "a3 b3 c3",
+      "a4 b4 c4",
+      "a5 b5 c5";
+
+
+  }
+
+}
 
 /* Footer end */

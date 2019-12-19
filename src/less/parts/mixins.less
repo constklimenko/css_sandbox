@@ -193,23 +193,27 @@
 
 .block-title() {
   .font-l-600;
-  margin-bottom: 88px;
+  margin-bottom : 88px;
   text-transform: capitalize;
 }
 
 .block-content() {
-  display : grid;
-grid-template-columns: 31.5% 11% 1fr;
+  display              : grid;
+  grid-template-columns: 31.5% 11% 1fr;
+
+  @media(max-width:@size-mobile) {
+    display: block;
+  }
 }
 
-.content-row(){
-  text-align: left;
-justify-self: stretch;
-align-self: start
+.content-row() {
+  text-align  : left;
+  justify-self: stretch;
+  align-self  : start
 }
 
-.diagrams-rectangle(@precent: 50%){
-   width :100%;
- height: 2em;
- background: linear-gradient(to right, @soil 0%, @soil @precent ,@sand @precent ,  @sand  100%);
+.diagrams-rectangle(@precent: 50%) {
+  width     : 100%;
+  height    : 2em;
+  background: linear-gradient(to right, @soil 0%, @soil @precent , @sand @precent , @sand 100%);
 }
