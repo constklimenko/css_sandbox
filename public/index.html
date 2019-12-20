@@ -8,6 +8,9 @@
     <title>Document with less</title>
     <link rel="stylesheet" href="bundle.min.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="owl-carusel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="owl-carusel/owl.theme.default.min.css" />
+
 </head>
 
 <body>
@@ -97,16 +100,33 @@
 
         <section class="portfolio">
             <h3 class="portfolio__title">portfolio</h3>
-            <div class="portfolio__content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti deserunt tenetur nam magni voluptas laboriosam laborum blanditiis officia sint illo, quas libero minus corrupti ad dignissimos, earum id incidunt magnam.</p>
-                <div class="portfolio__img-box">
+            <div class="projects__slider owl-carousel owl-theme" id="projects__slider">
 
-                    <img src="img/1.jpg" alt="1">
-                    <img src="img/2.jpg" alt="2">
-                    <img src="img/3.jpg" alt="3">
-                    <img src="img/4.jpg" alt="4">
+                <div class="portfolio__content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti deserunt tenetur nam magni voluptas laboriosam laborum blanditiis officia sint illo, quas libero minus corrupti ad dignissimos, earum id incidunt magnam.</p>
+                    <div class="portfolio__img-box">
+
+                        <img src="img/1.jpg" alt="1">
+                        <img src="img/2.jpg" alt="2">
+                        <img src="img/3.jpg" alt="3">
+                        <img src="img/4.jpg" alt="4">
+                    </div>
+                </div>
+
+                <div class="portfolio__content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti deserunt tenetur nam magni voluptas laboriosam laborum blanditiis officia sint illo, quas libero minus corrupti ad dignissimos, earum id incidunt magnam.</p>
+                    <div class="portfolio__img-box">
+
+                        <img src="img/4.jpg" alt="1">
+                        <img src="img/3.jpg" alt="2">
+                        <img src="img/2.jpg" alt="3">
+                        <img src="img/1.jpg" alt="4">
+                    </div>
                 </div>
             </div>
+
+
+
         </section>
 
 
@@ -141,6 +161,30 @@
 
         </div>
     </footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="owl-carusel/owl.carousel.min.js"></script>
+
+    <script>
+        jQuery(
+            function($) {
+                $(document).ready(function() {
+                    $('#projects__slider').owlCarousel({
+                        loop: true, //Зацикливаем слайдер
+                        margin: 0, //Отступ от элемента справа 
+                        nav: true, // навигация
+                        autoplay: false, //Автозапуск слайдера
+                        dots: false,
+                        responsive: { //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+                            0: {
+                                items: 1
+                            },
+
+                        }
+                    });
+                });
+            });
+    </script>
     <script>
         function toggleNav() {
             document.querySelector('.nav').classList.toggle('m-hide')
