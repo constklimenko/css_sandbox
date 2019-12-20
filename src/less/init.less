@@ -19,13 +19,22 @@ a {
   cursor         : pointer;
 }
 
+.section {
+  .size-full;
+  .padding-h();
+
+  @media (max-width: @size-mobile) {
+    text-align: center;
+  }
+}
+
 
 /* Header */
 
 .header {
+  &:extend(.section);
   .bg-cover-color('img/bg.jpg', @background);
-  .size-full;
-  .padding-h();
+
 
   color: white;
 
@@ -143,8 +152,7 @@ a {
 
 /* About */
 .about {
-  .size-full;
-  .padding-h();
+  &:extend(.section);
 
   &__title {
     .block-title;
@@ -160,8 +168,7 @@ a {
 
 /* Skills */
 .skills {
-  .size-full;
-  .padding-h();
+  &         :extend(.section);
   background: @white;
 
   &__title {
@@ -234,8 +241,7 @@ a {
 /* Portfolio */
 
 .portfolio {
-  .size-full;
-  .padding-h();
+  &:extend(.section);
 
   &__title {
     .block-title;
@@ -282,8 +288,7 @@ a {
 
 /* Footer */
 .footer {
-  .size-full;
-  .padding-h();
+  &:extend(.section);
 
   &__title {
     .block-title;
@@ -292,16 +297,22 @@ a {
   &__content {
     display              : grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows   : repeat(5, auto);
-    align-items          : stretch;
-    justify-items        : stretch;
-    grid-row-gap         : 1em;
-    grid-template-areas  : "a1 b1 c1",
-      "a2 b2 c2",
-      "a3 b3 c3",
-      "a4 b4 c4",
-      "a5 b5 c5";
 
+    @media(max-width:@size-mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__column {
+      .vertical-grid;
+      align-items  : stretch;
+      justify-items: stretch;
+      grid-row-gap : 1em;
+
+      @media(max-width:@size-mobile) {
+        text-align: left;
+      }
+
+    }
 
   }
 
