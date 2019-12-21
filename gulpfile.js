@@ -12,20 +12,39 @@ var sourcemaps = require('gulp-sourcemaps');
 var cleanCss = require('gulp-clean-css');
 var browserSync = require('browser-sync').create();
 
+// var config = {
+//     path: {
+//         less: './src/less/*.less',
+//         html: '.public/index.html',
+
+//     },
+//     output: {
+//         cssName: 'bundle.min.css',
+//         path: './public',
+//         path_file: './public/index.html',
+//         path_file_css: './public/bundle.min.css',
+//         newHtml: '/tmp/fz3temp-2'
+//     }
+// }
+
+// info card
 var config = {
     path: {
-        less: './src/less/*.less',
-        html: '.public/index.html',
+        less: 'info_card/src/less/*.less',
+        html: 'info_card/public/index.html',
 
     },
     output: {
         cssName: 'bundle.min.css',
-        path: './public',
-        path_file: './public/index.html',
-        path_file_css: './public/bundle.min.css',
+        path: 'info_card/public',
+        path_file: 'info_card/public/index.html',
+        path_file_css: 'info_card/public/bundle.min.css',
         newHtml: '/tmp/fz3temp-2'
     }
 }
+
+
+
 
 gulp.task('less', function() {
     return gulp.src(config.path.less)
