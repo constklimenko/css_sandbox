@@ -7,13 +7,26 @@
 .size-full() {
   width        : 100vw;
   height       : auto;
-  padding-right: ~"calc(50vw - 555px)";
-  padding-left : ~"calc(50vw - 555px)";
+  padding-right: ~"calc(50vw - 705px)";
+  padding-left : ~"calc(50vw - 705px)";
   box-sizing   : border-box;
 
   @media (max-width:1170px) {
     padding-left : 30px;
     padding-right: 30px;
+  }
+}
+
+.size-full-margin() {
+  width        : 100vw;
+  height       : auto;
+  margin-right: ~"calc(50vw - 705px)";
+  margin-left : ~"calc(50vw - 705px)";
+  box-sizing   : border-box;
+
+  @media (max-width:1170px) {
+    margin-left : 0px;
+    margin-right: 0px;
   }
 }
 
