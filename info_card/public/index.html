@@ -8,20 +8,111 @@
     <title>Document with less</title>
     <link rel="stylesheet" href="bundle.min.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="owl-carusel/owl.carousel.min.css" />
-    <link rel="stylesheet" href="owl-carusel/owl.theme.default.min.css" />
+
+    <link href="jsCarousel2.0.0/jsCarousel-2.0.0.css" rel="stylesheet" type="text/css" />
+
+    <script src="jsCarousel2.0.0/jquery-1.4.4.min.js" type="text/javascript"></script>
+
+    <script src="jsCarousel2.0.0/jsCarousel-2.0.0.js" type="text/javascript"></script>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('#carouselv').jsCarousel({
+                onthumbnailclick: function(src) {
+                    alert(src);
+                },
+                autoscroll: true,
+                masked: false,
+                itemstodisplay: 3,
+                orientation: 'v'
+            });
+            $('#carouselh').jsCarousel({
+                onthumbnailclick: function(src) {
+                    alert(src);
+                },
+                autoscroll: false,
+                circular: true,
+                masked: false,
+                itemstodisplay: 5,
+                orientation: 'h'
+            });
+            $('#carouselhAuto').jsCarousel({
+                onthumbnailclick: function(src) {
+                    alert(src);
+                },
+                autoscroll: true,
+                masked: true,
+                itemstodisplay: 5,
+                orientation: 'h'
+            });
+
+        });
+    </script>
+
 
 </head>
 
 <body>
 
-    <aside class="aside"></aside>
+    <aside class="aside">
+        <div id="carouselv">
+            <div>
+                <img alt="" src="images/img_1.jpg" /><br />
+                <span class="thumbnail-text">Image Text</span></div>
+            <div>
+
+            </div>
+    </aside>
 
     <div class="slider-big"></div>
 
     <div class="article"></div>
 
     <div class="slider-small"></div>
+    <script src="jsCarousel2.0.0/jquery-1.4.4.min.js" type="text/javascript"></script>
+
+    <script src="jsCarousel2.0.0/jsCarousel-2.0.0.js" type="text/javascript"></script>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('#carouselv').jsCarousel({
+                onthumbnailclick: function(src) {
+                    alert(src);
+                },
+                autoscroll: true,
+                circular: true,
+                masked: false,
+                itemstodisplay: 5,
+                orientation: 'v'
+            });
+            $('#carouselh').jsCarousel({
+                onthumbnailclick: function(src) {
+                    alert(src);
+                },
+                autoscroll: false,
+                circular: true,
+                masked: false,
+                itemstodisplay: 5,
+                orientation: 'h'
+            });
+            $('#carouselh2').jsCarousel({
+                onthumbnailclick: function(src) {
+                    alert(src);
+                },
+                autoscroll: true,
+                masked: true,
+                itemstodisplay: 5,
+                orientation: 'h'
+            });
+
+        });
+    </script>
 
 </body>
 
