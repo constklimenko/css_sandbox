@@ -13,11 +13,11 @@
 
 </head>
 
-<body>
+<body class="info-card">
 
     <aside class="aside">
 
-        <div class="aside-slider">
+        <div class="aside__slider">
             <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
             <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
             <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
@@ -29,11 +29,35 @@
         </div>
     </aside>
 
-    <div class="slider-big"></div>
+    <div class="top">
+
+        <div class="top__slider">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
+
+
+
+        </div>
+
+    </div>
 
     <div class="article"></div>
 
-    <div class="slider-small"></div>
+    <div class="bottom">
+        <div class="bottom__slider">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
+
+
+
+        </div>
+    </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -42,10 +66,16 @@
 
     <script>
         $(document).ready(function() {
-            $('.aside-slider').bxSlider({
+            $('.aside__slider').bxSlider({
                 mode: 'vertical',
                 captions: true,
-                slideWidth: 600
+
+            });
+
+            $('.top__slider').bxSlider({
+                mode: 'horisontal',
+                captions: true,
+
             });
         });
     </script>
