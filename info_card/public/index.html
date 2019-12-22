@@ -8,14 +8,26 @@
     <title>Document with less</title>
     <link rel="stylesheet" href="bundle.min.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="owl-carusel/owl.carousel.min.css" />
-    <link rel="stylesheet" href="owl-carusel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="js/jquery.bxslider.css">
+
 
 </head>
 
 <body>
 
-    <aside class="aside"></aside>
+    <aside class="aside">
+
+        <div class="aside-slider">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
+
+
+
+        </div>
+    </aside>
 
     <div class="slider-big"></div>
 
@@ -23,6 +35,20 @@
 
     <div class="slider-small"></div>
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.aside-slider').bxSlider({
+                mode: 'vertical',
+                captions: true,
+                slideWidth: 600
+            });
+        });
+    </script>
 </body>
 
 </html>
