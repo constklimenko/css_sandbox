@@ -8,7 +8,7 @@
     <title>Document with less</title>
     <link rel="stylesheet" href="bundle.min.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="js/jquery.bxslider.css">
+
 
 
 </head>
@@ -18,13 +18,12 @@
         <aside class="aside">
 
             <div class="aside__slider">
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quis facere, in iste nam, nobis expedita, placeat et qui eos ipsa minima reiciendis dicta possimus ab quos. Cum, nihil vitae.</div>
-
-
+                <div class="aside__slide"> <img src="img/pp1.jpg" alt=""></div>
+                <div class="aside__slide"> <img src="img/pp2.jpg" alt=""></div>
+                <div class="aside__slide"> <img src="img/pp3.jpg" alt=""></div>
+                <div class="aside__slide"> <img src="img/nyc.jpg" alt=""></div>
+                <div class="aside__slide"> <img src="img/nyc2.jpg" alt=""></div>
+                <div class="aside__slide"> <img src="img/london.jpg" alt=""></div>
 
             </div>
         </aside>
@@ -35,10 +34,6 @@
                 <div class="top__slide"> <img src="img/pp1.jpg" alt=""></div>
                 <div class="top__slide"> <img src="img/pp2.jpg" alt=""></div>
                 <div class="top__slide"> <img src="img/pp3.jpg" alt=""></div>
-                <div class="top__slide"> <img src="img/pp1.jpg" alt=""></div>
-                <div class="top__slide"> <img src="img/pp2.jpg" alt=""></div>
-                <div class="top__slide"> <img src="img/pp3.jpg" alt=""></div>
-
 
 
             </div>
@@ -71,10 +66,12 @@
         $(document).ready(function() {
             $('.aside__slider').bxSlider({
                 mode: 'vertical',
-                captions: true,
-                speed: 1000,
+                captions: false,
+                speed: 1200,
+                minSlides: 3,
                 maxSlides: 5,
-                slideWidth: 250,
+                slideWidth: 200,
+                moveSlides: 1,
 
 
             });
@@ -82,9 +79,10 @@
             $('.top__slider').bxSlider({
                 mode: 'horizontal',
                 captions: true,
-                speed: 1000,
+                speed: 1200,
                 maxSlides: 3,
                 slideWidth: 300,
+                moveSlides: 1,
 
             });
         });
