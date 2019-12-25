@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document with less</title>
+    <link rel="stylesheet" href="bundle.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,600&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.aside__slider').bxSlider({
+                mode: 'vertical',
+                captions: false,
+                speed: 1200,
+                minSlides: 3,
+                maxSlides: 5,
+                slideWidth: 200,
+                moveSlides: 1,
+
+
+            });
+
+            $('.top__slider').bxSlider({
+                mode: 'horizontal',
+                captions: true,
+                speed: 1200,
+                maxSlides: 3,
+                slideWidth: 300,
+                moveSlides: 1,
+
+            });
+
+            $('.bottom__slider').bxSlider({
+                mode: 'horizontal',
+                captions: true,
+                speed: 1200,
+                maxSlides: 3,
+                slideWidth: 80,
+                moveSlides: 1,
+
+            });
+        });
+    </script>
+</body>
+
+</html>

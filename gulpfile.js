@@ -28,17 +28,33 @@ var browserSync = require('browser-sync').create();
 // }
 
 // info card
+// var config = {
+//     path: {
+//         less: 'info_card/src/less/*.less',
+//         html: 'info_card/public/index.html',
+
+//     },
+//     output: {
+//         cssName: 'bundle.min.css',
+//         path: 'info_card/public',
+//         path_file: 'info_card/public/index.html',
+//         path_file_css: 'info_card/public/bundle.min.css',
+//         newHtml: '/tmp/fz3temp-2'
+//     }
+// }
+
+
 var config = {
     path: {
-        less: 'info_card/src/less/*.less',
-        html: 'info_card/public/index.html',
+        less: 'bs/src/less/*.less',
+        html: 'bs/public/index.html',
 
     },
     output: {
         cssName: 'bundle.min.css',
-        path: 'info_card/public',
-        path_file: 'info_card/public/index.html',
-        path_file_css: 'info_card/public/bundle.min.css',
+        path: 'bs/public',
+        path_file: 'bs/public/index.html',
+        path_file_css: 'bs/public/bundle.min.css',
         newHtml: '/tmp/fz3temp-2'
     }
 }
