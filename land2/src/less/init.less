@@ -2,14 +2,7 @@
 @import (reference) "parts/bootstrap";
 @import "parts/mixins";
 
-.section{
-  &:extend(.container all);
-  
-  &__row{
-    &:extend(.row all);
-  }
-  
-  &__col {
-  &:extend(.col-12 all, .col-md-3 all, .mt-3);
-}
+.header{
+  .size-full(40vw);
+  .bg-cover-color('img/header.jpg', rgba(0,0,0,0.7));
 }
