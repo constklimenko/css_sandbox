@@ -2,7 +2,50 @@
 @import (reference) "parts/bootstrap";
 @import "parts/mixins";
 
-.header{
+
+body {
+  font-family: @font-family;
+}
+
+.header {
   .size-full(40vw);
-  .bg-cover-color('img/header.jpg', rgba(0,0,0,0.7));
+  .bg-cover-color('img/header.jpg', rgba(0, 0, 0, 0.7));
+  color:white;
+  
+  
+
+  &__card {
+    width: 75%;
+    height: 30vw;
+    margin:auto;
+    padding-top: 5vw;
+padding-bottom: 5vw;
+    background: rgba(0, 0, 0, 0.7);
+    filter:drop-shadow(0px 0px 3px rgb(238, 228, 170));
+    
+    @media(max-width: @size-tablete){
+      width: 90%;
+      height: 38vw;
+      padding-top: 1vw;
+padding-bottom: 1vw;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    
+    text-align: center;
+    &__title {
+      font-family: @font-h1;
+      font-size  : 16vw;
+      font-weight: normal;
+      text-transform: capitalize;
+    }
+    
+    &__text{
+      font-size :1.92vw;
+    }
+    
+    &__small{
+      font-size :1vw;
+      margin-top:-4vw;
+    }
+  }
 }
