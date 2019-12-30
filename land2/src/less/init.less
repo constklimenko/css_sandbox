@@ -2,15 +2,28 @@
 @import (reference) "parts/bootstrap";
 @import "parts/mixins";
 
+a{
+  color: black;
+}
 
 body {
   font-family: @font-family;
+  color:black;
+}
+
+.adress__icon{
+  .masked-icon('img/point.svg')
+}
+
+.phone__icon{
+  .masked-icon('img/phone.svg')
 }
 
 .btn{
  &:extend(.btn );
  background: #FFD351;
  max-height: 40px ;
+ cursor: pointer;
 }
 
 .logo{
@@ -24,11 +37,16 @@ body {
   &:extend(.container all);
   
   &__top{
-    .nav-grid-logo-cntr;
+    .nav-grid-logo-cntr(2fr, 1fr);
     align-items: center;
     height: 78px;
     padding-bottom: 10px;
     padding-top: 10px;
+    
+    .phone{
+      justify-self: end;
+      padding-right: 10px;;
+    }
   }
   
   &__bottom{

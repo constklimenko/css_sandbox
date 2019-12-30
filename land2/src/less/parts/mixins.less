@@ -431,3 +431,12 @@ a:not([href]):not([tabindex]):focus {
     height    : 2em;
     background: linear-gradient(to right, @soil 0%, @soil @precent , @sand @precent , @sand 100%);
   }
+  
+  .masked-icon(@url){
+    display: inline-block;
+height: 1em;
+width: 1em;
+background-color: currentColor;
+mask-image: url(@url);
+mask-repeat: no-repeat;
+  }
