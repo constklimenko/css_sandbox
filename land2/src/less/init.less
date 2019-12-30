@@ -8,8 +8,15 @@ body {
 }
 
 .btn{
- &:extend(.btn all);
+ &:extend(.btn );
  background: #FFD351;
+ max-height: 40px ;
+}
+
+.logo{
+  align-self:  stretch;
+  .bg-contain('img/logo.png');
+  
 }
 
 .nav{
@@ -18,11 +25,15 @@ body {
   
   &__top{
     .nav-grid-logo-cntr;
+    align-items: center;
+    height: 78px;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
   
   &__bottom{
     &:extend(.row all);
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 
