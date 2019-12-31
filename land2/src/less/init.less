@@ -34,14 +34,22 @@ body {
 
 .nav{
   
-  &:extend(.container all);
+  
+  position: sticky;
+  top:0;
+  z-index: 20;
+  .bg-contain-color('img/nav.jpg', '#fff');
+  
+  //background: url(img/nav.jpg) no-repeat 0% 115%/contain;
   
   &__top{
+    &:extend(.container );
     .nav-grid-logo-cntr(2fr, 1fr);
     align-items: center;
     height: 78px;
     padding-bottom: 10px;
     padding-top: 10px;
+    
     
     .phone{
       justify-self: end;
@@ -50,8 +58,11 @@ body {
   }
   
   &__bottom{
-    &:extend(.row all);
+    &:extend( .row all, .container all);
     justify-content: space-around;
+    margin-right: auto;
+    margin-left: auto;
+    & a {color:white!important;}
   }
 }
 
