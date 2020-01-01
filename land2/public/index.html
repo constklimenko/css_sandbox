@@ -17,22 +17,29 @@
 
 <body>
 
+
+
     <nav class="nav">
         <div class="nav__top">
+            <div class="nav__toggle m-show " onclick="toggleNav()">
+                <div class="nav__toggle__line"></div>
+                <div class="nav__toggle__line "></div>
+                <div class="nav__toggle__line "></div>
+            </div>
 
-            <a class="adress" href="">Мы находимся: г. Уфа, ул. Обской, 2
+            <a class="adress m-hide" href="">Мы находимся: г. Уфа, ул. Обской, 2
 
                 <span class="adress__icon"></span>
             </a>
 
             <div class="logo"></div>
-            <a href="#" class="phone">
+            <a href="#" class="phone m-hide">
                 <span class="phone__icon"></span>+7 (347)-225-75-18 </a>
             <button class="btn">заказать звонок</button>
 
 
         </div>
-        <div class="nav__bottom">
+        <div class="nav__bottom m-hide">
             <a href="#">Главная</a>
             <a href="#">Номера</a>
             <a href="#">Цены</a>
@@ -43,6 +50,7 @@
             <a href="#">Контакты</a>
             <a href="#">О сауне</a>
             <a href="#">Скидки</a>
+            <div class="nav__cross m-show" onclick="toggleNav()">×</div>
         </div>
     </nav>
 
@@ -75,7 +83,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/jquery.bxslider.min.js"></script>
+    <script>
+        function toggleNav() {
+            document.querySelector('.nav__bottom').classList.toggle('m-hide');
 
+        }
+    </script>
 
 
 </body>
