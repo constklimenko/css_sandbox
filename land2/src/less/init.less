@@ -2,67 +2,84 @@
 @import (reference) "parts/bootstrap";
 @import "parts/mixins";
 
-a{
+a {
   color: black;
 }
 
 body {
   font-family: @font-family;
-  color:black;
+  color      : black;
 }
 
-.adress__icon{
+.adress__icon {
   .masked-icon('img/point.svg')
 }
 
-.phone__icon{
+.phone__icon {
   .masked-icon('img/phone.svg')
 }
 
-.btn{
- &:extend(.btn );
- background: #FFD351;
- max-height: 40px ;
- cursor: pointer;
+.btn {
+  &:extend(.btn);
+  background: #FFD351;
+  max-height: 40px;
+  cursor    : pointer;
 }
 
-.logo{
-  align-self:  stretch;
+.logo {
+  align-self: stretch;
   .bg-contain('img/logo.png');
-  
+
 }
 
-.nav{
-  
-  
+.nav {
+
+
   position: sticky;
-  top:0;
-  z-index: 20;
-  .bg-contain-color('img/nav.jpg', '#fff');
-  
-  //background: url(img/nav.jpg) no-repeat 0% 115%/contain;
-  
-  &__top{
-    &:extend(.container );
+  top     : 0;
+  z-index : 20;
+  .bg-contain-color('img/nav.jpg', #fff);
+  background-position: 50% 110%;
+  background-repeat  : repeat-x;
+
+  @media (max-width: 1000px) {
+    background-position: 50% 100%;
+  }
+
+  @media (max-width: 770px) {
+    background-position: 50% 150%;
+
+  }
+
+  &__top {
+    &:extend(.container);
     .nav-grid-logo-cntr(2fr, 1fr);
-    align-items: center;
-    height: 78px;
+    align-items   : center;
+    height        : 78px;
     padding-bottom: 10px;
-    padding-top: 10px;
-    
-    
-    .phone{
-      justify-self: end;
-      padding-right: 10px;;
+    padding-top   : 10px;
+
+
+    .phone {
+      justify-self : end;
+      padding-right: 10px;
+      ;
     }
   }
-  
-  &__bottom{
-    &:extend( .row all, .container all);
+
+  &__bottom {
+    &:extend(.row all, .container all);
     justify-content: space-around;
-    margin-right: auto;
-    margin-left: auto;
-    & a {color:white!important;}
+    margin-right   : auto;
+    margin-left    : auto;
+
+    & a {
+      color: white ;
+
+      @media (max-width: 770px) {
+        color: black;
+      }
+    }
   }
 }
 
@@ -70,13 +87,13 @@ body {
 .header {
   .size-full(40vw);
   .bg-cover-color('img/header.jpg', rgba(0, 0, 0, 0.7));
-  color      : white;
-  padding-top: 1px;
+  color         : white;
+  padding-top   : 1px;
   padding-bottom: 1px;
-  
-   @media(max-width: @size-tablete){
-     height: auto;
-   }
+
+  @media(max-width: @size-tablete) {
+    height: auto;
+  }
 
 
 
@@ -90,11 +107,11 @@ body {
     filter    : drop-shadow(0px 0px 3px rgb(238, 228, 170));
 
     @media(max-width: @size-tablete) {
-      width         : 90%;
-      height        : auto;
-      margin-top    : 1vw;
+      width        : 90%;
+      height       : auto;
+      margin-top   : 1vw;
       margin-bottom: 1vw;
-      background    : rgba(0, 0, 0, 0.5);
+      background   : rgba(0, 0, 0, 0.5);
     }
 
     text-align: center;
@@ -108,19 +125,20 @@ body {
 
     &__text {
       font-size: 1.92vw;
-       @media(max-width: @size-tablete){
-         font-size: @fnt-size-l;
-       }
+
+      @media(max-width: @size-tablete) {
+        font-size: @fnt-size-l;
+      }
     }
 
     &__small {
       font-size : 1vw;
       margin-top: -4vw;
-      
-       @media(max-width: @size-tablete){
-         font-size: @fnt-size-s;
-         margin-top: 0;
-       }
+
+      @media(max-width: @size-tablete) {
+        font-size : @fnt-size-s;
+        margin-top: 0;
+      }
     }
   }
 }

@@ -236,10 +236,10 @@ a:not([href]):not([tabindex]):focus {
       url(@url2) no-repeat center/ contain;
   }
   
-  .bg-contain-color(@url, @color) {
-  background-image: linear-gradient(to right, @color 0%,@color 100%),
-    url(@url);
-  //   background-image   : @color, url(@url);
+  .bg-contain-color(@url, @color: white) {
+  background-color: @color;
+  background-image:  url(@url);
+  
   background-repeat       : no-repeat;
   background-position     : center;
   background-size         : contain;
