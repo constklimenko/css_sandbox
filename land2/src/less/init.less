@@ -34,7 +34,7 @@ body {
   .bg-contain('img/logo.png');
 
 }
-
+/* nav */
 .nav {
 
 
@@ -141,9 +141,15 @@ body {
   top     : 30px;
   left    : 30px;
   .font-l-600;
+  cursor:pointer;
+  
+  
 }
 }
+/* nav  ends*/
 
+
+/* header */
 
 .header {
   .size-full(40vw);
@@ -203,6 +209,22 @@ body {
     }
   }
 }
+
+
+/* header ends */
+
+/* numbers */
+.numbers {
+
+  &__title {
+    .font-l-600;
+    font-family: @font-h2;
+    text-transform: uppercase;
+
+  }
+}
+/*end numbers */
+
 .m-show {
   @media(min-width:@size-mobile + 1) {
     display: none;
