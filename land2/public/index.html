@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="bundle.min.css">
 
     <link href="http://allfont.ru/allfont.css?fonts=stylo-bold" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="owl-carusel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="owl-carusel/owl.theme.default.min.css" />
 
 
 
@@ -65,7 +67,23 @@
 
     <section class="numbers">
         <div class="numbers__title">наши номера</div>
-        <div class="numbers__slider"></div>
+        <div class="numbers__slider">
+            <div class="numbers__slide">
+                <div class="numbers__slide__img" style="background-image: url('img/sauna_10.jpg') ;"></div>
+
+                <div class="numbers__slide__title">номер 1</div>
+                <div class="numbers__slide__price">300 р</div>
+                <div class="numbers__slide__btn">Подробнее </div>
+            </div>
+
+            <div class="numbers__slide">
+                <div class="numbers__slide__img" style="background-image: url('img/sauna_11.jpg') ;"></div>
+
+                <div class="numbers__slide__title">номер 2</div>
+                <div class="numbers__slide__price">300 р</div>
+                <div class="numbers__slide__btn">Подробнее </div>
+            </div>
+        </div>
 
         <div class="numbers__cards">
             <div class="numbers__card card">
@@ -90,12 +108,33 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js "></script>
-    <script src="js/jquery.bxslider.min.js "></script>
+    <script src="owl-carusel/owl.carousel.min.js"></script>
     <script>
         function toggleNav() {
             document.querySelector('.nav__bottom').classList.toggle('m-hide');
 
         }
+    </script>
+
+    <script>
+        jQuery(
+            function($) {
+                $(document).ready(function() {
+                    $('#numbers__slider').owlCarousel({
+                        loop: true, //Зацикливаем слайдер
+                        margin: 0, //Отступ от элемента справа 
+                        nav: true, // навигация
+                        autoplay: false, //Автозапуск слайдера
+                        dots: false,
+                        responsive: { //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+                            0: {
+                                items: 1
+                            },
+
+                        }
+                    });
+                });
+            });
     </script>
 
 
