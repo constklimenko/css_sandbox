@@ -218,8 +218,8 @@ a:not([href]):not([tabindex]):focus {
     url(@url2) no-repeat center/ cover;
 }
 
-.bg-cover-color(@url, @color) {
-  background-image: linear-gradient(to right, rgba(9, 5, 47, .5) 0%, rgba(49, 29, 94, .5) 100%),
+.bg-cover-color(@url, @rest... ) {
+  background-image: @rest,
     url(@url);
   //   background-image   : @color, url(@url);
     background-repeat  :  no-repeat ;
@@ -334,7 +334,7 @@ a:not([href]):not([tabindex]):focus {
   }
 
 
-  .padding-h(@p-top: 93px, @p-bottom: 145px) {
+  .padding-h(@p-top: 100px, @p-bottom: 100px) {
     padding-bottom: @p-bottom;
     padding-top   : @p-top;
 
