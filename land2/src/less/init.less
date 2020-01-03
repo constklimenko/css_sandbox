@@ -19,8 +19,11 @@ body {
   .masked-icon('img/phone.svg')
 }
 
+
+
+
 .btn {
-  &:extend(.btn);
+  
   background: #FFD351;
   max-height: 40px;
   cursor    : pointer;
@@ -28,6 +31,18 @@ body {
     font-size: 10px;
   }
 }
+
+button {
+  &:extend(.btn);
+  background: rgba(0, 0, 0, 0);
+  
+  padding: 0.1em;
+  max-height: 3em;
+  
+
+}
+
+
 
 .logo {
   align-self: stretch;
@@ -218,12 +233,15 @@ rgba(49, 29, 94, .5) 100%));
 /* numbers */
 .numbers {
   &:extend(.flex-column);
+  position: relative;
   
   .padding-h(100px,100px);
   
   .bg-cover-color('img/numbers.jpg', linear-gradient(to top,
   rgba(251, 250, 252, 0) 10%,
   rgb(255, 255, 255) 100%));
+  
+  
 
   &__title {
     .font-l-600;
@@ -234,11 +252,41 @@ rgba(49, 29, 94, .5) 100%));
 
   }
   
+  &__nav{
+    &:extend(.container all);
+    
+    .owl-next, .owl-prev{
+      position: absolute;
+      top: 290px;
+      font-size: 2em;
+
+      z-index: 300;
+      
+      &:visited,
+      &:focus,
+      &:active,
+      &:hover {
+        outline: 0 none !important;
+      }
+    }
+    
+    .owl-next{
+      right: 3%;
+    }
+    
+    .owl-prev{
+      left: 3%;
+    }
+  }
+  
   &__slider{
-    width:100%;
+    width:90%;
     height:auto;
+    margin: auto;
     &:extend(.row);
     overflow: hidden;
+    &:extend(.container all);
+    margin: auto;
     
   }
   
@@ -286,8 +334,11 @@ rgba(49, 29, 94, .5) 100%));
   }
   
   &__cards{
-    &:extend(.row all, .container all);
+    &:extend(.row all);
         justify-content: center;
+        
+        &:extend( .container all);
+        margin:auto;
     
   }
   
@@ -333,7 +384,21 @@ rgba(49, 29, 94, .5) 100%));
       text-align: center;
     }
   }
+  
+  .owl-item {
+  height: auto;
 }
+
+@media(min-width: 1200px) {
+
+  .owl-item:not(.active)+.active,
+  .active+.active+.active+.active {
+    filter: opacity(0.5);
+  }
+}
+}
+
+
 /*end numbers */
 
 .m-show {

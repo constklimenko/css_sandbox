@@ -67,6 +67,7 @@
 
     <section class="numbers">
         <div class="numbers__title">наши номера</div>
+        <div class="numbers__nav"></div>
         <div class="numbers__slider owl-carousel owl-theme">
             <div class="numbers__slide">
                 <div class="numbers__slide__img" style="background-image: url('img/sauna_10.jpg') ;"></div>
@@ -80,6 +81,22 @@
                 <div class="numbers__slide__img" style="background-image: url('img/sauna_11.jpg') ;"></div>
 
                 <div class="numbers__slide__title">номер 2</div>
+                <div class="numbers__slide__price">300 р</div>
+                <div class="numbers__slide__btn">Подробнее </div>
+            </div>
+
+            <div class="numbers__slide">
+                <div class="numbers__slide__img" style="background-image: url('img/sauna_20.jpg') ;"></div>
+
+                <div class="numbers__slide__title">номер 3</div>
+                <div class="numbers__slide__price">300 р</div>
+                <div class="numbers__slide__btn">Подробнее </div>
+            </div>
+
+            <div class="numbers__slide">
+                <div class="numbers__slide__img" style="background-image: url('img/sauna_32.jpg') ;"></div>
+
+                <div class="numbers__slide__title">номер 4</div>
                 <div class="numbers__slide__price">300 р</div>
                 <div class="numbers__slide__btn">Подробнее </div>
             </div>
@@ -122,10 +139,12 @@
                 $(document).ready(function() {
                     $('.numbers__slider').owlCarousel({
                         loop: true, //Зацикливаем слайдер
-                        margin: 0, //Отступ от элемента справа 
+                        margin: 20, //Отступ от элемента справа 
                         nav: true, // навигация
                         autoplay: false, //Автозапуск слайдера
                         dots: false,
+                        lazyLoad: true,
+                        navContainer: '.numbers__nav',
                         responsive: { //Адаптивность. Кол-во выводимых элементов при определенной ширине.
                             0: {
                                 items: 1
@@ -133,6 +152,10 @@
 
                             700: {
                                 items: 3
+                            },
+
+                            1200: {
+                                items: 4
                             },
 
                         }
