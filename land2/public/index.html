@@ -66,7 +66,7 @@
     </header>
 
     <section class="numbers">
-        <div class="numbers__title">наши номера</div>
+        <h2 class="numbers__title">наши номера</h2>
         <div class="numbers__nav"></div>
         <div class="numbers__slider owl-carousel owl-theme">
             <div class="numbers__slide">
@@ -121,6 +121,42 @@
         </div>
     </section>
 
+    <section class="album">
+        <h2 class="album__title">Наша сауна</h2>
+
+        <div class="album__grid">
+            <div class="album__grid__text">
+                <h3>Сауна сегодня</h3>
+                <p>Это не только место, где можно попариться и помыться. Это заведение успешно сочетает в себе черты кафе и караоке-бара. Здесь можно разнообразно проводить досуг. Обычно каждая сауна имеет свои преимущества. В данном случае сауна с бассейном
+                    по цене вполне доступной может стать местом проведения самых разных мероприятий для коллективного отдыха - с хорошей парной и бассейном.</p>
+            </div>
+
+            <img src="img/1.jpg" alt="" class="album__grid__img">
+            <img src="img/2.jpg" alt="" class="album__grid__img">
+            <img src="img/3.jpg" alt="" class="album__grid__img">
+            <img src="img/4.jpg" alt="" class="album__grid__img">
+            <img src="img/5.jpg" alt="" class="album__grid__img">
+        </div>
+    </section>
+
+    <section class="promotion">
+
+        <div class="promotion__nav"></div>
+        <div class="promotion__slider owl-carousel owl-theme">
+            <div class="promotion__slide">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni illum totam, porro eaque ipsum dolorum hic alias harum delectus assumenda eos aspernatur, nihil tempora animi at. Alias maxime ratione placeat?</div>
+
+            <div class="promotion__slide">AAAAAAAAAAAAAAAAAAAAAAAAAAA</div>
+        </div>
+
+    </section>
+
+    <section class="review">
+        <h2 class="review__title"></h2>
+        <div class="review__nav"></div>
+        <div class="review__slider owl-carousel owl-theme"></div>
+        <div class="review__btn"></div>
+    </section>
+
 
 
 
@@ -150,7 +186,11 @@
                                 items: 1
                             },
 
-                            700: {
+                            600: {
+                                items: 2
+                            },
+
+                            900: {
                                 items: 3
                             },
 
@@ -161,6 +201,34 @@
                         }
                     });
                 });
+
+
+            });
+    </script>
+
+    <script>
+        jQuery(
+            function($) {
+                $(document).ready(function() {
+                    $('.promotion__slider').owlCarousel({
+                        loop: true, //Зацикливаем слайдер
+                        margin: 20, //Отступ от элемента справа 
+                        nav: true, // навигация
+                        autoplay: false, //Автозапуск слайдера
+                        dots: false,
+                        lazyLoad: true,
+                        navContainer: '.promotion__nav',
+                        responsive: { //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+                            0: {
+                                items: 1
+                            },
+
+
+                        }
+                    });
+                });
+
+
             });
     </script>
 
