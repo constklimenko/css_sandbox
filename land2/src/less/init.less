@@ -217,7 +217,8 @@ rgba(49, 29, 94, .5) 100%));
 
 /* numbers */
 .numbers {
-  .vertical-grid;
+  &:extend(.flex-column);
+  
   .padding-h(100px,100px);
   
   .bg-cover-color('img/numbers.jpg', linear-gradient(to top,
@@ -229,6 +230,7 @@ rgba(49, 29, 94, .5) 100%));
     font-family: @font-h2;
     text-transform: uppercase;
     margin-bottom: 70px;
+    text-align: center;
 
   }
   
@@ -236,6 +238,7 @@ rgba(49, 29, 94, .5) 100%));
     width:100%;
     height:auto;
     &:extend(.row);
+    overflow: hidden;
     
   }
   

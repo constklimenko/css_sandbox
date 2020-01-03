@@ -67,7 +67,7 @@
 
     <section class="numbers">
         <div class="numbers__title">наши номера</div>
-        <div class="numbers__slider">
+        <div class="numbers__slider owl-carousel owl-theme">
             <div class="numbers__slide">
                 <div class="numbers__slide__img" style="background-image: url('img/sauna_10.jpg') ;"></div>
 
@@ -120,7 +120,7 @@
         jQuery(
             function($) {
                 $(document).ready(function() {
-                    $('#numbers__slider').owlCarousel({
+                    $('.numbers__slider').owlCarousel({
                         loop: true, //Зацикливаем слайдер
                         margin: 0, //Отступ от элемента справа 
                         nav: true, // навигация
@@ -129,6 +129,10 @@
                         responsive: { //Адаптивность. Кол-во выводимых элементов при определенной ширине.
                             0: {
                                 items: 1
+                            },
+
+                            700: {
+                                items: 3
                             },
 
                         }

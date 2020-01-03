@@ -173,8 +173,8 @@ a:not([href]):not([tabindex]):focus {
   box-sizing: border-box;
 }
 
-.size-full(@height: auto, @max-l: @size-tablete) {
-  width        : 100vw;
+.size-full(@height: auto, @max-l: @size-tablete, @width:100%) {
+  width        : @width;
   height       : @height;
   padding-right: ~"calc(50vw - 705px)";
   padding-left : ~"calc(50vw - 705px)";
