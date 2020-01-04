@@ -246,6 +246,10 @@ header, section, footer{
       font-size     : 16vw;
       font-weight   : normal;
       text-transform: capitalize;
+       @media(min-width: @viewport-max) {
+        font-size: 200px;
+        }
+      
     }
 
     &__text {
@@ -258,7 +262,8 @@ header, section, footer{
 
     &__small {
       font-size : 1vw;
-      margin-top: -4vw;
+       @media(max-width: @size-tablete){margin-top: -4vw;}
+      
 
       @media(max-width: @size-tablete) {
         font-size : @fnt-size-s;
@@ -672,6 +677,7 @@ header, section, footer{
   
   &__slider{
     
+    &:extend(.container);
     .card {
   .vertical-grid;
   background   :white;
