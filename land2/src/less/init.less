@@ -282,7 +282,14 @@ rgba(49, 29, 94, .5) 100%));
       &:hover {
         outline: 0 none !important;
       }
+      
+     
     }
+    
+     @media(max-width: @size-mobile) {.owl-next,
+.owl-prev {
+   top: 25%;}
+ }
     
     .owl-next{
       right: 3%;
@@ -444,6 +451,10 @@ rgba(49, 29, 94, .5) 100%));
    .grid(40% auto auto,auto,20px,20px);
    max-width:100%;
    
+   @media(max-width: @size-tablete){
+     .vertical-grid;
+   }
+   
     &__img {
    width : 100%;
    height: auto;
@@ -463,6 +474,41 @@ rgba(49, 29, 94, .5) 100%));
 .promotion{
   .padding-h();
   position: relative;
+  .bg-cover-color('img/numbers.jpg', linear-gradient(270deg, rgba(103, 0, 198, 0.65) 0%, rgba(132, 0, 255, 0.15) 100%));
+  color:white;
+  
+    &__slide{
+      &:extend(.container all);
+      
+      
+      
+      &__title{
+        font-size: 64px;font-size: 64px;
+      }
+      
+      &__text{
+        
+        font-size: 30px;
+      }
+      
+      @media(max-width: @size-tablete) {
+
+  &__title,
+  &__text {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 34px;
+  }
+
+  .btn {
+
+    margin-left: ~"calc(50% - 4em)";
+
+  }
+}
+    }
   
    &__nav {
    &:extend(.container all);
@@ -471,8 +517,10 @@ rgba(49, 29, 94, .5) 100%));
    .owl-next,
    .owl-prev {
      position : absolute;
-     top      : 90px;
+     top      : 40%;
      font-size: 2em;
+     color:white;
+     
 
      z-index: 10;
 
