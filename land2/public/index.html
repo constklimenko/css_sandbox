@@ -159,17 +159,40 @@
     </section>
 
     <section class="review">
-        <h2 class="review__title"></h2>
+        <h2 class="review__title">Отзывы клиентов</h2>
         <div class="review__nav"></div>
-        <div class="review__slider  -owl-carousel -owl-theme">
+        <div class="review__slider  owl-carousel owl-theme">
 
             <div class="review__slide card">
                 <div class="card__img" style="background-image: url('img/face.svg') ;"></div>
                 <div class="card__title ">Ирина Петрова</div>
-                <div class="card__text ">В кругу родных и друзей можно попариться и активно провести время, после чего попить горячего чайку и побеседовать</div>
+                <div class="card__line"></div>
+                <div class="card__text ">С друзьями отмечали мальчишник. Незабываемые впечатления! Чисто, уютно. Отлично провели время!</div>
+            </div>
+
+            <div class="review__slide card">
+                <div class="card__img" style="background-image: url('img/face.svg') ;"></div>
+                <div class="card__title ">Ирина Петрова</div>
+                <div class="card__line"></div>
+                <div class="card__text ">С друзьями отмечали мальчишник. Незабываемые впечатления! Чисто, уютно. Отлично провели время!</div>
+            </div>
+
+            <div class="review__slide card">
+                <div class="card__img" style="background-image: url('img/face.svg') ;"></div>
+                <div class="card__title ">Ирина Петрова</div>
+                <div class="card__line"></div>
+                <div class="card__text ">С друзьями отмечали мальчишник. Незабываемые впечатления! Чисто, уютно. Отлично провели время!</div>
+            </div>
+
+            <div class="review__slide card">
+                <div class="card__img" style="background-image: url('img/face.svg') ;"></div>
+                <div class="card__title ">Ирина Петрова</div>
+                <div class="card__line"></div>
+                <div class="card__text ">С друзьями отмечали мальчишник. Незабываемые впечатления! Чисто, уютно. Отлично провели время!</div>
             </div>
         </div>
-        <div class="review__btn"></div>
+        <div class="review__dropdown"></div>
+        <div class="review__btn btn">Добавить отзыв</div>
     </section>
 
 
@@ -227,7 +250,7 @@
                 $(document).ready(function() {
                     $('.promotion__slider').owlCarousel({
                         loop: true, //Зацикливаем слайдер
-                        margin: 20, //Отступ от элемента справа 
+                        margin: 0, //Отступ от элемента справа 
                         nav: true, // навигация
                         autoplay: false, //Автозапуск слайдера
                         dots: false,
@@ -247,7 +270,40 @@
             });
     </script>
 
+    <script>
+        jQuery(
+            function($) {
+                $(document).ready(function() {
+                    $('.review__slider').owlCarousel({
+                        loop: true, //Зацикливаем слайдер
+                        margin: 20, //Отступ от элемента справа 
+                        nav: true, // навигация
+                        autoplay: false, //Автозапуск слайдера
+                        dots: false,
+                        lazyLoad: true,
+                        navContainer: '.review__nav',
+                        responsive: { //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+                            0: {
+                                items: 1
+                            },
 
+                            600: {
+                                items: 2
+                            },
+
+                            900: {
+                                items: 3
+                            },
+
+
+
+                        }
+                    });
+                });
+
+
+            });
+    </script>
 </body>
 
 </html>
