@@ -44,36 +44,36 @@ var browserSync = require('browser-sync').create();
 // }
 
 // лендинг 2
-// var config = {
-//     path: {
-//         less: 'land2/src/less/*.less',
-//         html: 'land2/public/index.html',
-
-//     },
-//     output: {
-//         cssName: 'bundle.min.css',
-//         path: 'land2/public',
-//         path_file: 'land2/public/index.html',
-//         path_file_css: 'land2/public/bundle.min.css',
-//         newHtml: '/tmp/fz3temp-2'
-//     }
-// }
-
-
 var config = {
     path: {
-        less: 'bs/src/less/*.less',
-        html: 'bs/public/index.html',
+        less: 'land2/src/less/*.less',
+        html: 'land2/public/index.html',
 
     },
     output: {
         cssName: 'bundle.min.css',
-        path: 'bs/public',
-        path_file: 'bs/public/index.html',
+        path: 'land2/public',
+        path_file: 'land2/public/index.html',
         path_file_css: 'land2/public/bundle.min.css',
         newHtml: '/tmp/fz3temp-2'
     }
 }
+
+
+// var config = {
+//     path: {
+//         less: 'bs/src/less/*.less',
+//         html: 'bs/public/index.html',
+
+//     },
+//     output: {
+//         cssName: 'bundle.min.css',
+//         path: 'bs/public',
+//         path_file: 'bs/public/index.html',
+//         path_file_css: 'land2/public/bundle.min.css',
+//         newHtml: '/tmp/fz3temp-2'
+//     }
+// }
 
 gulp.task('less', function() {
     return gulp.src(config.path.less)
@@ -81,7 +81,7 @@ gulp.task('less', function() {
         .pipe(less())
         .pipe(concat(config.output.cssName))
         .pipe(authoprefixer())
-        //.pipe(cleanCss())
+        // .pipe(cleanCss())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.output.path))
         .pipe(browserSync.stream());

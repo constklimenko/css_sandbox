@@ -53,6 +53,7 @@ button {
 .logo {
   align-self: stretch;
   .bg-contain('img/logo.png');
+  
 
 }
 
@@ -469,6 +470,7 @@ header, section, footer{
   &:extend(.container );
   .padding-h();
   position: relative;
+  z-index: 4;
 
   &__title {
     .title-h2; 
@@ -477,7 +479,7 @@ header, section, footer{
   }
 
   &__grid {
-    .grid(40% auto auto, auto, 20px, 20px);
+    .grid(40% auto auto, 1fr, 20px, 20px);
     max-width: 100%;
 
     @media(max-width: @size-tablete) {
@@ -485,8 +487,10 @@ header, section, footer{
     }
 
     &__img {
-      width : 100%;
+      width : auto;
+      max-width: 100%;
       height: auto;
+      max-height: 100%;
       z-index: 5;
     }
 
@@ -510,7 +514,7 @@ header, section, footer{
   color: white;
 
   &__slide {
-    &:extend(.container all);
+    &:extend(.container );
 
 
 
@@ -684,9 +688,9 @@ header, section, footer{
   
   box-sizing   : border-box;
   border-radius: 5px;
-  max-width    : ~"calc(100% - 70px)";
-  margin-right : 70px;
-  margin-left  : 70px;
+  // max-width    : ~"calc(100% - 70px)";
+  // margin-right : 70px;
+  // margin-left  : 70px;
   position: relative;
   padding-top:  65px;
   margin-top: 65px;
@@ -730,6 +734,84 @@ header, section, footer{
 
 
 /* review  ends*/
+
+/* footer */
+.footer{
+  background-color: @darkest;
+  position: relative;
+  .padding-h(20px,20px);
+  
+   & a {
+   color: white;
+
+
+ }
+  
+  &__container{
+    &:extend(.container);
+    .flex-row;
+    justify-content: space-between;
+  }
+  
+  &__img-block {
+    .grid(auto, 58px auto);
+    img{
+      justify-self: center;
+    }
+  }
+  
+  &__links{
+    .grid(max-content max-content, repeat(5, 1fr), 3em, 1em);
+   
+  }
+  
+  &__contacts{
+    .grid(max-content max-content, repeat(4, 1fr), 30px, 1em);
+    
+    .btn {
+      grid-column: ~"2/3";
+    }
+    
+    .social-icons{
+  grid-column: ~"2/3";
+}
+  }
+}
+
+.social-icons{
+  .flex-row;
+  
+  .inst{
+    
+    .bg-contain-color('img/inst.svg',#DD4B39); 
+    width:2em;
+    height:2em;
+    border-radius: 10%;
+    margin-right: 0.5em;
+  }
+  
+  .vk{
+    
+    .bg-contain-color('img/vk.svg', #44678D) ;
+    background-size: 80%;
+    width:2em;
+    height:2em;
+    border-radius: 10%;
+    margin-right: 0.5em;
+  }
+  
+  .twi{
+    
+    .bg-contain-color('img/twi.svg', #50ABF1);
+    background-size: 80%;
+    width:2em;
+    height:2em;
+    border-radius: 10%;
+    margin-right: 0.5em;
+  }
+}
+
+/* footer  ends*/
 
 .m-show {
   @media(min-width:@size-mobile + 1) {
