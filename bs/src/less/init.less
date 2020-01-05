@@ -2,14 +2,19 @@
 @import (reference) "parts/bootstrap";
 @import "parts/mixins";
 
-.section{
-  &:extend(.container all);
-  
-  &__row{
-    &:extend(.row all);
-  }
-  
-  &__col {
-  &:extend(.col-12 all, .col-md-3 all, .mt-3);
+html,body{
+  .clean;
 }
+
+.view-port{
+  width:@viewport;
+  margin: 0 auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  .clean;
 }
