@@ -47,14 +47,14 @@ var browserSync = require('browser-sync').create();
 var config = {
     path: {
         less: 'land2/src/less/*.less',
-        html: 'land2/public/index.html',
+        html: 'land2/public/l2-index.html',
 
     },
     output: {
-        cssName: 'bundle.min.css',
+        cssName: 'l2-bundle.min.css',
         path: 'land2/public',
-        path_file: 'land2/public/index.html',
-        path_file_css: 'land2/public/bundle.min.css',
+        path_file: 'land2/public/l2-index.html',
+        path_file_css: 'land2/public/l2-bundle.min.css',
         newHtml: '/tmp/fz3temp-2'
     }
 }
@@ -101,8 +101,7 @@ gulp.task('serve', (done) => {
             baseDir: config.output.path
         }
     });
-    gulp.watch(config.path.less, gulp.series('less'));
-    //  'push', 'pushCss'));
+    gulp.watch(config.path.less, gulp.series('less', 'push', 'pushCss'));
     gulp.watch(config.path.html).on('change', () => {
         browserSync.reload();
         done();
