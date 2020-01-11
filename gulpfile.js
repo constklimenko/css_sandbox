@@ -44,17 +44,33 @@ var browserSync = require('browser-sync').create();
 // }
 
 // лендинг 2
+// var config = {
+//     path: {
+//         less: 'land2/src/less/*.less',
+//         html: 'land2/public/l2-index.html',
+
+//     },
+//     output: {
+//         cssName: 'l2-bundle.min.css',
+//         path: 'land2/public',
+//         path_file: 'land2/public/l2-index.html',
+//         path_file_css: 'land2/public/l2-bundle.min.css',
+//         newHtml: '/tmp/fz3temp-2'
+//     }
+// }
+
+// лендинг 3
 var config = {
     path: {
-        less: 'land2/src/less/*.less',
-        html: 'land2/public/l2-index.html',
+        less: 'land3/src/less/*.less',
+        html: 'land3/public/l3-index.html',
 
     },
     output: {
-        cssName: 'l2-bundle.min.css',
-        path: 'land2/public',
-        path_file: 'land2/public/l2-index.html',
-        path_file_css: 'land2/public/l2-bundle.min.css',
+        cssName: 'l3-bundle.min.css',
+        path: 'land3/public',
+        path_file: 'land3/public/l3-index.html',
+        path_file_css: 'land2/public/l3-bundle.min.css',
         newHtml: '/tmp/fz3temp-2'
     }
 }
