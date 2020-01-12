@@ -179,8 +179,8 @@ a:not([href]):not([tabindex]):focus {
 .size-full(@height: auto, @max-l: @size-tablete, @width:100%) {
   width: @width;
   height: @height;
-  padding-right: ~"calc(50vw - 705px)";
-  padding-left: ~"calc(50vw - 705px)";
+  padding-right: ~"calc(50vw - 729px)";
+  padding-left: ~"calc(50vw - 729px)";
   box-sizing: border-box;
 
   @media (max-width: @max-l) {
@@ -190,11 +190,11 @@ a:not([href]):not([tabindex]):focus {
 }
 
 .size-full-margin(@height: auto,@max-l: @size-tablete) {
-  width: ~"calc(100% - 100vw + 1410)";
+  width: ~"calc(100% - 100vw + 1438)";
   height: @height;
   box-sizing: border-box;
 
-  margin: ~"calc(50vw - 705px)";
+  margin: ~"calc(50vw - 729px)";
   box-sizing: border-box;
 
   @media (max-width: @max-l) {
@@ -218,7 +218,7 @@ a:not([href]):not([tabindex]):focus {
 
 .bg-cover-color(@url, @rest... ) {
   background-image: @rest, url(@url);
-  //   background-image   : @color, url(@url);
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -417,6 +417,58 @@ a:not([href]):not([tabindex]):focus {
   }
 }
 
+.title-h1() {
+  .font-xl-600;
+  font-family: @font-h1;
+  text-transform: uppercase;
+  margin-bottom: 19px;
+  text-align: center;
+  color: @yellow;
+  // text-shadow: 1px 1px 3px gray;
+  @media (max-width: @size-mobile) {
+    font-size: @fnt-size-m + 1px;
+  }
+}
+
+.title-h2() {
+  .font-l-600;
+  font-family: @font-h2;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+  text-align: center;
+  color: @yellow;
+  // text-shadow: 1px 1px 3px gray;
+  @media (max-width: @size-mobile) {
+    font-size: @fnt-size-m;
+  }
+}
+
+.title-h2() {
+  .font-l-600;
+  font-family: @font-h2;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+  text-align: center;
+  color: @yellow;
+  // text-shadow: 1px 1px 3px gray;
+  @media (max-width: @size-mobile) {
+    font-size: @fnt-size-m;
+  }
+}
+
+.title-h3() {
+  .font-s-600;
+  font-family: @font-h2;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+  text-align: center;
+  color: @yellow;
+  // text-shadow: 1px 1px 3px gray;
+  @media (max-width: @size-mobile) {
+    font-size: @fnt-size-xs;
+  }
+}
+
 .block-content() {
   display: grid;
   grid-template-columns: 31.5% 11% 1fr;
@@ -452,4 +504,16 @@ a:not([href]):not([tabindex]):focus {
   mask-image: url(@url);
   mask-repeat: no-repeat;
   mask-size: contain;
+}
+
+.owl-nav-big() {
+  @media (min-width: 1160px) {
+    .owl-next {
+      right: ~"calc((100vw - 1140px)/2 - 20px)";
+    }
+
+    .owl-prev {
+      left: ~"calc((100vw - 1140px)/2 - 20px)";
+    }
+  }
 }

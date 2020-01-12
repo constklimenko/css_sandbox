@@ -70,7 +70,7 @@ var config = {
         cssName: 'l3-bundle.min.css',
         path: 'land3/public',
         path_file: 'land3/public/l3-index.html',
-        path_file_css: 'land2/public/l3-bundle.min.css',
+        path_file_css: 'land3/public/l3-bundle.min.css',
         newHtml: '/tmp/fz3temp-2'
     }
 }
@@ -117,7 +117,7 @@ gulp.task('serve', (done) => {
             baseDir: config.output.path
         }
     });
-    gulp.watch(config.path.less, gulp.series('less', 'push', 'pushCss'));
+    gulp.watch(config.path.less, gulp.series('less')); //, 'push', 'pushCss'));
     gulp.watch(config.path.html).on('change', () => {
         browserSync.reload();
         done();
