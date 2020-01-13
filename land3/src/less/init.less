@@ -98,69 +98,41 @@ footer {
 
 .header {
   .size-full(40vw);
-  .bg-cover-color("img/header.jpg",
-    linear-gradient(to right,
-      rgba(9, 5, 47, 0.5) 0%,
-      rgba(49, 29, 94, 0.5) 100%));
+  
   color         : white;
-  padding-top   : 1px;
-  padding-bottom: 1px;
+  padding-left:0;
+  padding-right: 0;
+  
 
   @media (max-width: @size-tablete) {
     height: auto;
   }
-
-  &__card {
-    width     : 75%;
-    height    : 30vw;
-    margin    : auto;
-    margin-top: 5vw;
-
-    background: rgba(0, 0, 0, 0.7);
-    filter    : drop-shadow(0px 0px 3px rgb(238, 228, 170));
-
-    @media (max-width: @size-tablete) {
-      width        : 90%;
-      height       : auto;
-      margin-top   : 1vw;
-      margin-bottom: 1vw;
-      background   : rgba(0, 0, 0, 0.5);
-    }
-
-    text-align: center;
-
-    &__title {
-      font-family   : @font-h1;
-      font-size     : 16vw;
-      font-weight   : normal;
-      text-transform: capitalize;
-
-      @media (min-width: @viewport-max) {
-        font-size: 200px;
-      }
-    }
-
-    &__text {
-      font-size: 1.92vw;
-
-      @media (max-width: @size-tablete) {
-        font-size: @fnt-size-l;
-      }
-    }
-
-    &__small {
-      font-size: 1vw;
-
-      @media (max-width: @size-tablete) {
-        margin-top: -4vw;
-      }
-
-      @media (max-width: @size-tablete) {
-        font-size : @fnt-size-s;
-        margin-top: 0;
-      }
-    }
+  
+  &__aside{
+    display: inline-block;
+    float:left;
+    
+    min-width:3rem;
   }
+  
+  &__main {
+    display: inline-block;
+    float:left;
+    width: ~"calc(100% - 4.5rem)";
+    height:100%;
+    .padding-h();
+    .bg-cover-color("img/header-l3.jpg", rgba(0,0,0,0.8));
+    
+    padding-left: 10%;
+    padding-right: 55%;
+  }
+  
+  .button{
+    .font-xxs-600;
+    height: 51px;
+  }
+
+  
 }
 
 /* header ends */
