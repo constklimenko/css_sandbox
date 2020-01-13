@@ -19,6 +19,17 @@ body {
   .masked-icon("img/phone.svg");
 }
 
+button {
+  &:extend(.btn);
+  background    : rgba(0, 0, 0, 0);
+  text-transform: uppercase;
+  padding       : 0.1em;
+  max-height    : 3em;
+  color: white;
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+
+}
+
 .button {
   background   : @yellow;
   max-height   : 54px;
@@ -31,14 +42,12 @@ body {
   }
 }
 
-button {
-  &:extend(.btn);
-  background    : rgba(0, 0, 0, 0);
-  text-transform: uppercase;
-  padding       : 0.1em;
-  max-height    : 3em;
-  color: white;
+.button--transparent {
+  border: 1px solid #FFFFFF;
+  background: transparent;
 }
+
+
 
 header,
 section,
