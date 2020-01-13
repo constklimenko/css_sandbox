@@ -98,21 +98,31 @@ footer {
 
 .header {
   .size-full(40vw);
-  
+  background-color: @darkest;
   color         : white;
   padding-left:0;
   padding-right: 0;
   
 
-  @media (max-width: @size-tablete) {
-    height: auto;
+  @media (max-width: 832px) {
+    height:auto;
+    width:100%;
+    display: grid;
+    padding: 0;
   }
   
   &__aside{
     display: inline-block;
     float:left;
-    
+    writing-mode: tb-rl;
     min-width:3rem;
+    text-align: center;
+    padding: 1em;
+    vertical-align: middle;
+    height:100%;
+    @media (max-width: @size-mobile) {
+    display: none;
+    }
   }
   
   &__main {
@@ -121,15 +131,24 @@ footer {
     width: ~"calc(100% - 4.5rem)";
     height:100%;
     .padding-h();
-    .bg-cover-color("img/header-l3.jpg", rgba(0,0,0,0.8));
+    .bg-cover-color("img/header-l3.jpg", linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%));
     
-    padding-left: 10%;
-    padding-right: 55%;
+    padding-left: ~"calc((100% - 500px)/5)";
+    padding-right: ~"calc(4*(100% - 500px)/5)";
+    
+    @media (max-width: @size-mobile) {
+    width:100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    }
   }
   
   .button{
     .font-xxs-600;
     height: 51px;
+    @media (max-width: @size-mobile) {
+    width:100%;
+    }
   }
 
   

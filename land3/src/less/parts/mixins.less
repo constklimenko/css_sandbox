@@ -216,9 +216,9 @@ a:not([href]):not([tabindex]):focus {
     url(@url2) no-repeat center/ cover;
 }
 
-.bg-cover-color(@url, @color ) {
-  background-color: @color;
-  background-image: url(@url);
+.bg-cover-color(@url, @rest... ) {
+  
+  background-image: @rest, url(@url);
 
   background-repeat  : no-repeat;
   background-position: center;
