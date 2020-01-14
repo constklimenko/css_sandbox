@@ -27,7 +27,8 @@ button {
   max-height    : 3em;
   color: white;
   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
-
+  margin-bottom: 20px;
+  margin-right: 20px;
 }
 
 .button {
@@ -111,7 +112,7 @@ footer {
   @media (max-width: 832px) {
     height:auto;
     width:100%;
-    display: grid;
+    grid-template-columns: 1fr;
     padding: 0;
   }
   
@@ -148,6 +149,15 @@ footer {
     }
   }
   
+  &__title {
+    .title-h1;
+  }
+  
+  &__text{
+    margin-bottom: 40px;
+  
+  }
+  
   .button{
     .font-xxs-600;
     height: 51px;
@@ -161,8 +171,38 @@ footer {
 
 /* header ends */
 
+/* projects */
+.projects {
+  .grid(1fr 1fr);
+  .padding-h(2em,2em);
+  padding-left: 100px;
+  .bg-contain-color('img/bg-line.svg', @darkest);
+  
+  @media (max-width: @size-tablete) {
+    padding-left: 30px;
+  }
+  
+  
+  &__text-slider{
+    &__title{
+      .title-h2();
+    }
+    
+    &__text{
+      .font-s-600;
+    }
+    
+    &__slider{
+      
+    }
+  }
+}
 
+.text-slide{
+  
+}
 
+/* projects  ends*/
 .m-show {
   @media (min-width: @size-mobile + 1) {
     display: none;
