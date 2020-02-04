@@ -12,7 +12,29 @@
     <link rel="stylesheet" href="owl-carusel/owl.carousel.min.css" />
     <link rel="stylesheet" href="owl-carusel/owl.theme.default.min.css" />
 
-
+<!-- Pixel Glass -->
+<style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      background-size: 100%;
+      /* Mobile layout by default */
+      background-image: url( "img/MOBILE.jpg" );
+    }
+    
+    /* Desktop */
+    @media ( min-width: 960px ) {
+      HTML {
+        /* Desktop layout */
+        background-image: url( "img/HOME.jpg" );
+        background-size: 100%;
+        
+      }
+    }
+  </style>
+  <link href="/pixel-glass/styles.css" rel="stylesheet">
+  <script src="/pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
 
 
 </head>
@@ -83,7 +105,7 @@
 
 
 
-    <script src="js/jquery.min.js "></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
     <script src="owl-carusel/owl.carousel.min.js"></script>
     <!-- <script>
         function toggleNav() {
