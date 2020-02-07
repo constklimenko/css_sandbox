@@ -1,16 +1,21 @@
-var gulp = require('gulp');
+const gulp = require('gulp');
 
 // gulp.task('hello', function(w) {
 //     console.log('hello world');
 //     w()
 // })
 
-var less = require('gulp-less');
-var authoprefixer = require('gulp-autoprefixer');
-var concat = require('gulp-concat');
-var sourcemaps = require('gulp-sourcemaps');
-var cleanCss = require('gulp-clean-css');
-var browserSync = require('browser-sync').create();
+const less = require('gulp-less');
+const authoprefixer = require('gulp-autoprefixer');
+const concat = require('gulp-concat');
+const sourcemaps = require('gulp-sourcemaps');
+const cleanCss = require('gulp-clean-css');
+const browserSync = require('browser-sync').create();
+const ftp = require('vinyl-ftp');
+
+import 'getconn.js';
+
+
 
 // var config = {
 //     path: {
@@ -91,7 +96,7 @@ var config = {
 //     }
 // }
 
-gulp.task('less', function() {
+gulp.task('less', function () {
     return gulp.src(config.path.less)
         .pipe(sourcemaps.init())
         .pipe(less())
@@ -103,11 +108,11 @@ gulp.task('less', function() {
         .pipe(browserSync.stream());
 });
 
-gulp.task('push', function() {
+gulp.task('push', function () {
     return gulp.src(config.output.path_file).pipe(gulp.dest(config.output.newHtml));
 });
 
-gulp.task('pushCss', function() {
+gulp.task('pushCss', function () {
     return gulp.src(config.output.path_file_css).pipe(gulp.dest(config.output.newHtml));
 })
 
@@ -125,4 +130,28 @@ gulp.task('serve', (done) => {
 
 });
 
+
+const globs = [
+    './app/index.html',
+
+];
+
+// Отправляем                                                                
+gulp.task('deploy', function () {
+
+    console.log("ftp task is running!");
+
+
+    const conn = getConn()
+
+
+    return
+
+    gulp.src(globs, { base: '.', buffer: false })
+
+        .pipe(conn.dest(''));
+
+});
+
 gulp.task('default', gulp.series('less', 'serve'));
+
