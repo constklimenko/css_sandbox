@@ -13,7 +13,7 @@ const cleanCss = require('gulp-clean-css');
 const browserSync = require('browser-sync').create();
 const ftp = require('vinyl-ftp');
 
-import 'getconn.js';
+
 
 
 
@@ -65,17 +65,33 @@ import 'getconn.js';
 // }
 
 // лендинг 3
+// var config = {
+//     path: {
+//         less: 'land3/src/less/*.less',
+//         html: 'land3/public/l3-index.html',
+
+//     },
+//     output: {
+//         cssName: 'l3-bundle.min.css',
+//         path: 'land3/public',
+//         path_file: 'land3/public/l3-index.html',
+//         path_file_css: 'land3/public/l3-bundle.min.css',
+//         newHtml: '/tmp/fz3temp-2'
+//     }
+// }
+
+// test
 var config = {
     path: {
-        less: 'land3/src/less/*.less',
-        html: 'land3/public/l3-index.html',
+        less: 'test/src/less/*.less',
+        html: 'test/public/test-index.html',
 
     },
     output: {
-        cssName: 'l3-bundle.min.css',
-        path: 'land3/public',
-        path_file: 'land3/public/l3-index.html',
-        path_file_css: 'land3/public/l3-bundle.min.css',
+        cssName: 'test.css',
+        path: 'test/public',
+        path_file: 'test/public/test-index.html',
+        path_file_css: 'test/public/test.css',
         newHtml: '/tmp/fz3temp-2'
     }
 }
@@ -136,22 +152,7 @@ const globs = [
 
 ];
 
-// Отправляем                                                                
-gulp.task('deploy', function () {
 
-    console.log("ftp task is running!");
-
-
-    const conn = getConn()
-
-
-    return
-
-    gulp.src(globs, { base: '.', buffer: false })
-
-        .pipe(conn.dest(''));
-
-});
 
 gulp.task('default', gulp.series('less', 'serve'));
 
